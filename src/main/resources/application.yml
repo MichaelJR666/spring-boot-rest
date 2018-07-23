@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+# Spring Boot Actuator
+management:
+  security:
+    enabled: false #Don't disable it in production
+  port: 8088
+  context-path: /monitor #Change actuator path
+
+endpoints:
+  shutdown:
+    enabled: true
+
+info:
+   app:
+      name: @project.artifactId@ #Use maven artifact id as application name
+      version: @project.version@ #Use maven artifact id as application version
